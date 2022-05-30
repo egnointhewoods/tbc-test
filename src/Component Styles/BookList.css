@@ -1,0 +1,49 @@
+.bookDescription{
+    text-align: start;
+}
+.bookList{
+    margin-top: 50px !important;
+}
+.searchBookListWrapper{
+    animation: fadeIn 2s;
+}
+.bookCard img{
+    width: 100%;
+    height: 220px;
+    border-radius: 3%;
+    border: 1px solid black;
+}
+
+.title{
+    color: rgb(81, 81, 81);
+}
+.author{
+    color: gray;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@media only screen and (max-width: 1000px) {
+    .bookCard{
+        width: 25% !important;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .bookCard{
+        width: 33% !important;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .bookCard{
+        width: 50% !important;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .bookCard{
+        width: 100% !important;
+    }
+}

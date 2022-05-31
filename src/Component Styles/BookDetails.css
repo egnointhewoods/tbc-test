@@ -1,13 +1,15 @@
 .bookDetailImg{
     width: 280px !important;
+    border: 1px solid black;
+    margin-left: 15px;
 }
 .bookDetails{
     width: 100%;
 }
 .bookDetailsWrapper{
     display: flex;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .title{
     margin-top: 20px;
@@ -17,4 +19,26 @@
 }
 .description{
     text-align: start !important;
+}
+
+@media only screen and (max-width: 755px) {
+    .queriedBookCard{
+        width: 33% !important;
+    }
+    .description{
+        min-width: 100%;
+    }
+    .bookDetailImg{
+        width: 210px !important;
+    }
+}
+@media only screen and (max-width: 585px) {
+    .queriedBookCard{
+        width: 50% !important;
+    }    
+}
+@media only screen and (max-width: 366px) {
+    .queriedBookCard{
+        width: 100% !important;
+    }    
 }

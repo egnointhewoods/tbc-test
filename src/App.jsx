@@ -1,6 +1,6 @@
 import BookList from './Components/BookList';
-import BookDetails from './Components/BookDetails'
 import FixedNavbar from './Components/FixedNavbar'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

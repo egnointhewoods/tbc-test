@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react';
 import LoadingScreen from '../Components/LoadingScreen'
 
 
-export default function BookDetails({book2}){    
+export default function BookDetails(){  
+
     let search = window.location.search;
     let params = new URLSearchParams(search);
     let bookId = params.get('bookdetails');
-    let getBookDetailsAPI = `https://www.googleapis.com/books/v1/volumes/${bookId}?key=AIzaSyAyESPX-QKsLHTJfvNzb-KXIwqOtRX4Cb8`;
+    let getBookDetailsAPI = `https://www.googleapis.com/books/v1/volumes/${bookId}`;
 
     const [book, setBook] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -23,13 +24,16 @@ export default function BookDetails({book2}){
             })
             .then(data => {
                 setBook(data.volumeInfo);
+                console.log(book)
                 setIsLoading(false);
             })
             .catch(err => {
                 setIsLoading(false);
                 setError(err.message);
             })        
-    }, [])
+    }, [getBookDetailsAPI])
+
+
     if(isLoading){
         return(
             <LoadingScreen />
@@ -47,7 +51,7 @@ export default function BookDetails({book2}){
                     {book.bookDescription && <p>Description: {book.bookDescription}</p>}
                     {book.publisher && <p>Publisher: {book.publisher}</p>}     
                     {book.language && <p>Language: {book.language}</p>}                
-            
+                    {book.previewLink && <a href={book.previewLink} target='_blank'>Preview</a>}
                 </div>     
             </div>
         )

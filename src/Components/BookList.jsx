@@ -1,6 +1,6 @@
 import useFetch from '../Hooks/useFetch'
 import React from 'react';
-import SearchField from './SearchField'
+import SearchField from './SearchResults'
 import '../Component Styles/BookList.css'
 
 export default function BookList(){
@@ -25,11 +25,11 @@ export default function BookList(){
 
               return(
               <div key={book.id} className='bookCard col-2'> 
-                  <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Thumbnail of a book" />
+                  <img src={book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail} alt="Thumbnail of a book" />
                   <div className='bookDescription'>
-                  <p className='title'>{book.volumeInfo.title}</p>
-                  <p className='author'>{book.volumeInfo.authors[0]}</p>
-                  <p className='price'>{book.volumeInfo.price} GEL</p>
+                    <p className='title'>{book.volumeInfo.title}</p>
+                    <p className='author'>{book.volumeInfo.authors[0]}</p>
+                    <p className='price'>{book.volumeInfo.price} GEL</p>
                   </div>
               </div>
               )

@@ -1,16 +1,24 @@
 import BookList from './Components/BookList';
+import BookDetails from './Components/BookDetails'
 import FixedNavbar from './Components/FixedNavbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   
     
     return (
-      <div className="App container-lg">
+      <Router>
+        <div className="App container-lg">
         <FixedNavbar />
-        <BookList />  
-      </div>
+        <Routes>                    
+            <Route path='*' element = {<BookList /> } />
+        </Routes> 
+
+        </div>
+
+      </Router>
     );
   } 
 

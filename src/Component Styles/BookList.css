@@ -5,7 +5,7 @@
     margin-top: 50px !important;
 }
 .searchBookListWrapper{
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 .bookCard img{
     width: 100%;
@@ -13,10 +13,17 @@
     border-radius: 3%;
     border: 1px solid black;
 }
+.bookCard{
+    cursor: pointer;
+}
+.bookCard:hover{
+    background-color: rgba(128, 128, 128, 0.089);
+}
 
 .title{
     color: rgb(81, 81, 81);
 }
+
 .author{
     color: gray;
 }
@@ -37,12 +44,12 @@
         width: 33% !important;
     }
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 487px) {
     .bookCard{
         width: 50% !important;
     }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 270px) {
     .bookCard{
         width: 100% !important;
     }

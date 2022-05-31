@@ -16,6 +16,9 @@ body{
 .searchBookListWrapper{
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: white;
+  z-index: 30;
 }
 
 .searchTerm {
@@ -47,7 +50,7 @@ body{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{ 
-  margin-top: 100px;
+  margin-top: 140px;
   margin-left: 50%;
   display: flex;
   justify-content: center;

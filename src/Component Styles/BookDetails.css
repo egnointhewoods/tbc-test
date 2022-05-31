@@ -1,0 +1,20 @@
+.bookDetailImg{
+    width: 280px !important;
+}
+.bookDetails{
+    width: 100%;
+}
+.bookDetailsWrapper{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.title{
+    margin-top: 20px;
+}
+.bookDescription{
+    font-size: 13px;
+}
+.description{
+    text-align: start !important;
+}
